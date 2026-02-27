@@ -18,14 +18,32 @@
     Unirme a la búsqueda 🚀
   </a>
 
+  <a href="https://www.instagram.com/kangoroo.80?igsh=eDNsOGM2NGtoZ2Vl" 
+     target="_blank" 
+     class="insta-btn">
+     Apóyanos en Instagram 📸
+  </a>
+
   <button class="play-btn" onclick="activarMusica()">
     Activar música 🔊
   </button>
 
   <script>
+    const audio = document.getElementById("musica");
+
     function activarMusica(){
-      document.getElementById("musica").play();
+      audio.play().then(()=>{
+        console.log("Música activada");
+      }).catch(err=>{
+        console.log("Error:", err);
+      });
     }
+
+    document.addEventListener("click", function(){
+      if(audio.paused){
+        audio.play().catch(()=>{});
+      }
+    }, { once: true });
   </script>
 
 </body>
