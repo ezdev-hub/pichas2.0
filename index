@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atención</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="play-btn" onclick="activarMusica()">
+    Activar música 🔊
+  </button>
+
+  <a href="https://ezdev-hub.github.io/pichas3.0/" class="buscar-btn">
+    Unirme a la búsqueda 🚀
+  </a>
+
+  <script>
+    function activarMusica(){
+      const audio = document.getElementById("musica");
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
