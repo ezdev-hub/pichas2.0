@@ -5,18 +5,8 @@
 }
 
 body{
-  background:black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
   font-family: Arial, sans-serif;
-}
-
-.container{
   position:relative;
-  width:100%;
-  max-width:500px; /* tamaño ideal para móvil */
 }
 
 .fondo{
@@ -26,8 +16,8 @@ body{
 }
 
 .buscar-btn{
-  position:absolute;
-  bottom:110px;
+  position:fixed;
+  bottom:100px;
   left:50%;
   transform:translateX(-50%);
   padding:14px 25px;
@@ -37,11 +27,12 @@ body{
   color:white;
   text-decoration:none;
   font-weight:bold;
+  z-index:10;
 }
 
 .play-btn{
-  position:absolute;
-  bottom:50px;
+  position:fixed;
+  bottom:40px;
   left:50%;
   transform:translateX(-50%);
   padding:14px 25px;
@@ -50,4 +41,5 @@ body{
   border-radius:12px;
   background:#f4d03f;
   font-weight:bold;
+  z-index:10;
 }
